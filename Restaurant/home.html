@@ -6,17 +6,19 @@ Most recent revision:
 -->
 <html lang="en">
 <head>
-<meta charset="utf-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<title>Sydney's Restaurant</title>
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-<link href="restaurantStyles.css" rel="stylesheet" type="text/css"/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> 
 <script src="https://kit.fontawesome.com/137b6a5979.js"></script>
 <link rel="styesheet" type="text/css" href="file:///C:Users/HP-Pavilion/Desktop/font%20awsm/fontawesome-free-5.6.3-web/css/all.css">
+
+
 <style>
-header {
+
+.header {
 	background-color: black;
 	color: gold;
 	height: 100px;
@@ -28,17 +30,24 @@ height: 100%;
 width: 100%;
 background-color: tan;
 font-family: ariel, helvetica, sans-serif;
-color: #0d1f2d
+color: black
 }
 #mainImage {
 border:2px solid black;
 }
-.slector-for-some-widget {
+.selector-for-some-widget {
 box-sizing: content-box;
+}
+
+.footer{
+  background-color: black;
+	color: gold;
+	height: 100px;
+	text-align: center;
+	padding: 30px 10px 20px 10px;
 }
 </style>
 </head>
-
 <body>
 
 <div class="header container-fluid">
@@ -51,7 +60,6 @@ box-sizing: content-box;
 </div>
 <div class="row">
 <nav><!--The navigation elements will navigate to links-->
-<hr/>
 <ul class="nav nav-pills">
 <li class="nav-item active">
 <a class="nav-link" href="home.html"><i class="fas fa-home"></i></a>
@@ -63,62 +71,76 @@ box-sizing: content-box;
 <a class="nav-link" href="contact.html">Contact Us</a>
 </li>
 </ul>
-<hr/>
-</div>
-</div>
- 
-<hr/>
-<!--Image Slider -->
-<div id="slides" class="carousel slide" data-ride="carousel">
-<ul class="carousel-indicators">
-    <li data-target="slides" data-slide-to="0" class="active"></li>
-    <li data-target="slides" data-slide-to="1"></li>
-    <li data-target="slides" data-slide-to="2"></li>
-  </ul>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-	<img class="d-block w-100" src="Images/comingsoon.jpg" alt="Coming Soon">
-      <div class="carousel-caption d-none d-md-block">
-	  <h3 class="text-center">We're Opening a New Location January 2020!!</h3>
-	  <h4>The new location will be on Collins Avenue in Miami, FL!</h4>
-    </div>
-	</div>
-    <div class="item">
-	<img class="d-block w-100" src="Images/margaritas.jpg" alt="Strawberry Peach Margaritas">
-	<div class="carousel-caption d-none d-md-block">
-      <h3 class="text-center">We're rolling out our seasonal menu, with special options for the New Year!"</h3>
-	  <h4>Henny Peach Cobbler & Strawberry Peach Margaritas will be on the menu!!</h4>
-    </div>
-	</div>
-    <div class="item">
-	<img class="d-block w-100" src="Images/beer.jpg" alt="Cold Brew">
-	<div class="carousel-caption d-none d-md-block">
-      <h3 class="text-center">The Drink of the Month is SG Special Brew."</h3>
-    </div>
-  </div>
-  </div>
 
-  <!-- Left and right controls -->
-  <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-	<span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-	<span class="sr-only">Next</span>
-  </a>
+
+</div>
+</div>
+<br/>
+ 
+
+<!--Image Slider -->
+
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+	
+	 <div class="col-lg-12">                            
+            <div class="col-lg-8">
+			
+			</div>            
+          
+     </div>
+
+      <div class="item active" style="text-align:center">
+        <img class="img-fluid" src="Images/comingsoon.jpg" alt="Coming Soon">
+		<h3>We're Opening a New Location!!</h3>
+		<h4>Coming January 2020 in Miami, FL!!</h4>
+      </div>
+	 
+
+      <div class="item" style="text-align:center">
+        <img src="Images/margaritas.jpg" alt="Margaritas">
+		<h3>We're rolling out our seasonal menu, with special options for this season.</h3>
+		<h4>Come try out our Strawberry Peach Margaritas and our Crab & Shrimp Deviled Eggs!!</h4>
+      </div>
+
+      <div class="item" style="text-align:center">
+        <img src="Images/beer.jpg" alt="Beer">
+		<h3>The Drink of the Month is SG Special Brew!!</h3>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
   </div>
   
-  
+
+	  
+    
+     
   <!-- Jumbotron -->
  <div class="container-fluid">
   <div class="row jumbotron">
-  <div class="col-sm-12 col-md-9 col-lg-9 col-xl-9">
+  <div class="col-md-12">
   <h2 class="text-center">We're Opening a New Location January 2020!!<br/> The new location will be located in Miami, FL!!</h2>
   </div>
   </div> 
 
-<div class="main container-fluid padding">
+<div class="main container-fluid">
 <div class="row welcome text-center">
 <div class="col-12">
 <!--div for picture-->
@@ -128,20 +150,18 @@ box-sizing: content-box;
 </div>
 <div class="row welcome text-center">
 <div class="col-12">
-<h2 class="text-center mt-5">Restaurant Description</h2>
+<h2 class="text-center mt-5">About Us</h2>
 </div>
-<hr/>
 <div class="col-12">
-<p class="text-center mt-3">
+<h4 class="text-center mt-3" style="padding: 20px;">
 Sydney's Seafood Kitchen is based out of downtown Atlanta, GA. Our menu is inspired by a cajun American southern seafood twang. It's a great atmosphere welcoming all seafood and soul food lovers. There's great music and great food.<br/>
-Seafood lovers from all over gather for our Crab & Shrimp Grits, Deep Fried Lobster Tails, Cajun Fried Catfish & Three Cheese Macaroni, and our fans favorite Hennessy Peach Cobbler. We're open everyday 11AM until 10PM Monday through Thursday and 11AM until midnight on Friday through Sunday. Come hang out with us, listen to some great music, and enjoy great service and great food.</p>
-</p>
+Seafood lovers from all over gather for our Crab & Shrimp Grits, Deep Fried Lobster Tails, Cajun Fried Catfish & Three Cheese Macaroni, and our fans favorite Hennessy Peach Cobbler. We're open 11AM until 10PM Monday through Thursday and 11AM until midnight on Friday through Sunday. Come hang out with us, listen to some great music, and enjoy great service and great food.</p>
+</h4>
 </div>
 </div>
 
 
 <div class="footer container-fluid">
-<hr/>
 <h4 id="addressInformation">287 Peachtree Street, Atlanta, GA 30303</br>
 678.234.7192</h4>
 </div>

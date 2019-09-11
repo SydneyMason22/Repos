@@ -15,7 +15,7 @@ background-color: tan;
 font-family: ariel, helvetica, sans-serif;
 color: #0d1f2d
 }
-header, footer {
+.header {
 	background-color: black;
 	color: gold;
 	height: 100px;
@@ -104,7 +104,13 @@ nav a:visited {
 .carousel-indicators {
 	display: none;
 }
-
+.footer {
+	background-color: black;
+	color: gold;
+	height: 100px;
+	text-align: center;
+	padding: 30px 10px 20px 10px;
+	}
 </style>
 </head>
 
@@ -122,68 +128,23 @@ nav a:visited {
 <nav><!--The navigation elements will navigate to links-->
 <hr/>
 <ul class="nav nav-pills">
-<li class="nav-item">
+<li class="nav-item active">
 <a class="nav-link" href="home.html"><i class="fas fa-home"></i></a>
 </li>
 <li class="nav-item">
-<a class="nav-link menu" href="menu.html">Menu</a>
+<a class="nav-link" href="menu.html">Menu</a>
 </li>
 <li class="nav-item">
-<a class="nav-link contact" href="contact.html">Contact Us</a>
+<a class="nav-link" href="contact.html">Contact Us</a>
 </li>
 </ul>
 </div>
 </div>
-
-<!--Image Slider -->
-<div id="slides" class="carousel slide" data-ride="carousel">
-<ul class="carousel-indicators">
-    <li data-target="slides" data-slide-to="0" class="active"></li>
-    <li data-target="slides" data-slide-to="1"></li>
-    <li data-target="slides" data-slide-to="2"></li>
-  </ul>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-	<img class="d-block w-100" src="Images/comingsoon.jpg" alt="Coming Soon">
-      <div class="carousel-caption d-none d-md-block">
-	  <h3 class="text-center">We're Opening a New Location January 2020!!</h3>
-	  <h4>The new location will be on Collins Avenue in Miami, FL!</h4>
-    </div>
-	</div>
-    <div class="item">
-	<img class="d-block w-100" src="Images/margaritas.jpg" alt="Strawberry Peach Margaritas">
-	<div class="carousel-caption d-none d-md-block">
-      <h3 class="display-2">We're rolling out our seasonal menu, with special options for the New Year!"</h3>
-	  <h4>Henny Peach Cobbler & Strawberry Peach Margaritas will be on the menu!!</h4>
-    </div>
-	</div>
-    <div class="item">
-	<img class="d-block w-100" src="Images/beer.jpg" alt="Cold Brew">
-	<div class="carousel-caption d-none d-md-block">
-      <h3 class="display-2">The Drink of the Month is SG Special Brew."</h3>
-    </div>
-  </div>
-  </div>
-  <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-	<span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-	<span class="sr-only">Next</span>
-  </a>
-  </div>
+<br/>
   
-  <!-- Jumbotron -->
-  <div class="container-fluid">
-  <div class="row jumbotron">
-  <div class="col-sm-12 col-md-9 col-lg-9 col-xl-9">
-  <h2 class="text-center">We're Opening a New Location January 2020!!<br/> The new location will be located in Miami, FL!!</h2>
-  </div>
-  </div>
 
 <div class="main container-fluid">
-<caption><h2 class="text-center mt-5">Food Delightz</h2></caption>
+<caption><h1 class="text-center mt-5">Food Delightz</h1></caption>
 <div class="row welcome text-center">
 <div class="col-12 menu">
 <table id="tb1Food" class="table table-borderless">
@@ -212,7 +173,7 @@ nav a:visited {
 
 <div class="main container-fluid">
 <thead>
-<caption><h2 class="text-center mt-3">Beverages</h2></caption>
+<caption><h1 class="text-center mt-3">Beverages</h1></caption>
 </thead>
 <div class="row welcome text-center">
 <div class="col-12 menu">
@@ -241,9 +202,8 @@ nav a:visited {
 </div>
 
 <div class="footer container-fluid">
-<div class="row">
 <hr/>
-<h4 class="text-center" id="addressInformation">287 Peachtree Street, Atlanta, GA 30303</br>
+<h4 id="addressInformation">287 Peachtree Street, Atlanta, GA 30303</br>
 678.234.7192</h4>
 </div>
 </div>
