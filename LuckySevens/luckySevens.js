@@ -34,7 +34,5 @@ function playGame() {
 	document.getElementById("highRollCount").innerText = betArray.indexOf(maxWin);
 	document.getElementById("submitButton").innerText = "Play Again";
 	document.forms["luckySevens"]["begBet"].focus();
-	/* Used console.log(winArray); here during testing to see what the overall score was after each roll.
-	Otherwise, could have skipped using an array and tracked the max money held at each roll within first for loop's if. */
 	return false;
 }
