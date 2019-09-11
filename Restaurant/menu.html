@@ -1,18 +1,27 @@
 <!DOCTYPE html>
+<html>
 <head>
+<meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
 <title>Menu</title>
-<link href="styles/restaurantStyles.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<link href="restaurantStyles.css" rel="stylesheet" type="text/css"/>
+<script src="https://kit.fontawesome.com/137b6a5979.js"></script>
+<link rel="styesheet" type="text/css" href="file:///C:Users/HP-Pavilion/Desktop/font%20awsm/fontawesome-free-5.6.3-web/css/all.css">
 <style>
 body {
 background-color: tan;
 font-family: ariel, helvetica, sans-serif;
 color: #0d1f2d
 }
-table {
-width: 90%;
-margin: auto;
-text-align: center;
-}
+header, footer {
+	background-color: black;
+	color: gold;
+	height: 100px;
+	text-align: center;
+	padding: 30px 10px 20px 10px;
+	}
 th {
 height: 25px;
 }
@@ -23,90 +32,227 @@ background-color: lightgray;
 cellspacing="0";
 cellpadding="0";
 border: thin solid black;
-padding= 5px 10px;
 }
+.nav-link {
+	font-size: 1.1em !important;
+	text-align: center;
+	float: none;
+	display:inline-block;
+	color: red;
+}
+nav a:hover {
+	font-weight: bold;
+}
+nav a:active {
+	text-decoration: none
+}
+nav a:visited {
+	color: darkblue;
+}
+.carousel-inner img {
+	width:100%;
+	height: 100%;
+}
+.carousel-caption {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.carousel-caption h1 {
+	font-size: 500%;
+	text-transform: uppercase;
+	text-shadow: 1px 1px 15px #000;
+}
+.carousel-caption h3 {
+	font-size: 200%;
+	font-weight: 500%;
+	text-shadow: 1px 1px 10px #000;
+}
+.jumbotron {
+	padding: 1 rem;
+	border-radius: 1rem;
+}
+
+<!--Media Queries -->
+@media (max-width: 992px) {
+}
+@media (max-width:768px) {
+	.carousel-caption {
+	top: 45%;
+}
+.carousel-caption h1 {
+	font-size: 350%;
+}
+.carousel-caption h3 {
+	font-size: 140%;
+	font-weight: 400%;
+	padding-bottom: .2rem;
+}
+.display-2 {
+	font-size: 200%;
+}
+@media (max-width:768px) {
+.carousel-caption {
+	top: 40%;
+}
+.carousel-caption h1 {
+	font-size: 250%;
+}
+.carousel-caption h3 {
+	font-size: 110%;
+}
+.carousel-indicators {
+	display: none;
+}
+
 </style>
 </head>
 
 <body>
 
-<main>
-<header>
+<div class="header container-fluid">
+<div class="row">
 <h1>Sydney's Seafood Kitchen</h1>
-</header>
-
+<!--Inform users who have Javascript disabled that site is best viewed with in enabled.-->
+<noscript>
+<p style="color: red">Your browser does not support Javascript or it is disabled. This site is best viewed with Javascript.</p>
+</noscript>
+</div>
+<div class="row">
 <nav><!--The navigation elements will navigate to links-->
 <hr/>
-<p><a href="home.html">Home</a></p>
-<p><a href="menu.html">Menu</a></p>
-<p><a href="contact.html">Contact Us</a></p>
-<hr/>
-</nav>
+<ul class="nav nav-pills">
+<li class="nav-item">
+<a class="nav-link" href="home.html"><i class="fas fa-home"></i></a>
+</li>
+<li class="nav-item">
+<a class="nav-link menu" href="menu.html">Menu</a>
+</li>
+<li class="nav-item">
+<a class="nav-link contact" href="contact.html">Contact Us</a>
+</li>
+</ul>
+</div>
+</div>
 
-<section>
-<table id="tb1Food">
+<!--Image Slider -->
+<div id="slides" class="carousel slide" data-ride="carousel">
+<ul class="carousel-indicators">
+    <li data-target="slides" data-slide-to="0" class="active"></li>
+    <li data-target="slides" data-slide-to="1"></li>
+    <li data-target="slides" data-slide-to="2"></li>
+  </ul>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+	<img class="d-block w-100" src="Images/comingsoon.jpg" alt="Coming Soon">
+      <div class="carousel-caption d-none d-md-block">
+	  <h3 class="text-center">We're Opening a New Location January 2020!!</h3>
+	  <h4>The new location will be on Collins Avenue in Miami, FL!</h4>
+    </div>
+	</div>
+    <div class="item">
+	<img class="d-block w-100" src="Images/margaritas.jpg" alt="Strawberry Peach Margaritas">
+	<div class="carousel-caption d-none d-md-block">
+      <h3 class="display-2">We're rolling out our seasonal menu, with special options for the New Year!"</h3>
+	  <h4>Henny Peach Cobbler & Strawberry Peach Margaritas will be on the menu!!</h4>
+    </div>
+	</div>
+    <div class="item">
+	<img class="d-block w-100" src="Images/beer.jpg" alt="Cold Brew">
+	<div class="carousel-caption d-none d-md-block">
+      <h3 class="display-2">The Drink of the Month is SG Special Brew."</h3>
+    </div>
+  </div>
+  </div>
+  <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+	<span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+	<span class="sr-only">Next</span>
+  </a>
+  </div>
+  
+  <!-- Jumbotron -->
+  <div class="container-fluid">
+  <div class="row jumbotron">
+  <div class="col-sm-12 col-md-9 col-lg-9 col-xl-9">
+  <h2 class="text-center">We're Opening a New Location January 2020!!<br/> The new location will be located in Miami, FL!!</h2>
+  </div>
+  </div>
+
+<div class="main container-fluid">
+<caption><h2 class="text-center mt-5">Food Delightz</h2></caption>
+<div class="row welcome text-center">
+<div class="col-12 menu">
+<table id="tb1Food" class="table table-borderless">
 <tr>
-<th>Crab & Shrimp Grits</th>
-<th>Deep Fried Lobster Tails</th>
-<th>Cajun Fried Catfish Dinner</th>
+<th scope="col">Crab & Shrimp Grits</th>
+<th scope="col">Deep Fried Lobster Tails</th>
+<th scope="col">Cajun Fried Catfish Dinner<th>
 </tr>
+<tbody>
 <tr>
 <td><i>Cajun crab & lobsters chunks served over corn grits with a cream sauce.<br/>$26</i></td>
 <td><i>Two lobster tails fried and dipped in cajun butter, served with two sides.<br/>$28</i></td>
 <td><i>Two Buttermilk cajun fried catfish filets served with two sides.<br/>$24</i></td>
 <tr>
-<th>Crab Stuffed Salmon</th>
-<th>Baked Crab Mac & Cheese</th>
-<th>Grilled Garlic Shrimp Alfredo</th>
+<th scope="col">Crab Stuffed Salmon</th>
+<th scope="col">Baked Crab Mac & Cheese</th>
+<th scope="col">Grilled Garlic Shrimp Alfredo</th>
 </tr>
 <td><i>Tender sweet crab, stuffed into salmon filet, marinated and roasted. Served with two sides.<br/>$24</i></td>
 <td><i>Baked in a cast iron skillet, loaded with chunk of crab and cheese. Topped with more fresh crab.<br/>$21</i></td>
 <td><i>Grilled jumbo shrimp, creamy garlic Alfredo, tossed with linguini and broccoli.<br/>$22</i></td>
+</tbody>
 </table>
 <hr/>
-</section>
+</div>
 
-
-
-<section>
-
-<table id="tb1Beverage">
+<div class="main container-fluid">
 <thead>
-<tr>
-<th colspan="2">Beverages</th>
-</tr>
+<caption><h2 class="text-center mt-3">Beverages</h2></caption>
 </thead>
-
+<div class="row welcome text-center">
+<div class="col-12 menu">
+<table id="tb1Beverage" class="table table striped;">
 <tbody>
 <tr>
-<td>Root Beer</td>
+<td><strong>Root Beer</strong></td>
 <td>$3.00</td>
 </tr>
 <tr>
-<td>Bottles Water</td>
+<td><strong>Bottles Water</strong></td>
 <td>$1.25</td>
 </tr>
 <tr>
-<td>Lemonade</td>
+<td><strong>Lemonade</strong></td>
 <td>$1.00</td>
 </tr>
 <tr>
-<td>Iced Tea</td>
+<td><strong>Iced Tea</strong></td>
 <td>$1.25</td>
 </tr>
 </tbody>
 </table>
-</section>
+</div>
+</div>
+</div>
 
-<footer>
+<div class="footer container-fluid">
+<div class="row">
 <hr/>
-<p>287 Peachtreet Street, Atlanta, GA 30303</p>
-<p>678.522.0347</p>
-</footer>
+<h4 class="text-center" id="addressInformation">287 Peachtree Street, Atlanta, GA 30303</br>
+678.234.7192</h4>
+</div>
+</div>
 
 
 
-</main>
-
+<!-- CDN links copied from https://getbootstrap.com/docs/4.1/getting-started/introduction/ -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
 </html>
